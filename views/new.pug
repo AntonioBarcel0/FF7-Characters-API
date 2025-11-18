@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= title
+    body
+        h1 New character
+        p
+        a(href="/list") Back
+    form(action="/new" method="POST")
+        div
+            label(for="id") ID:
+            input(type="number" id="id" name="id" required)
+        div
+            label(for="name") Name:
+            input(type="text" id="name" name="name" required)
+        div
+            label(for="job") Job:
+            input(type="text" id="job" name="job" required)
+        div
+            label(for="weapon") Weapon:
+            input(type="text" id="weapon" name="weapon" required)
+        div
+            label(for="level") Level:
+            input(type="number" id="level" name="level" min="1" max="99" required)
+        div
+            button(type="submit") Create
